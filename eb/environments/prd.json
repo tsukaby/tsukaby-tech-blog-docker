@@ -1,0 +1,71 @@
+{
+  "ApplicationName": "tsukaby-tech-blog",
+  "EnvironmentName": "Please_use_--environment-name",
+  "Description": "My tech blog",
+  "CNAMEPrefix": "prd-tsukaby-tech-blog",
+  "Tier": {
+    "Name": "WebServer",
+    "Type": "Standard",
+    "Version": "1.0"
+  },
+  "Tags": [
+    {
+      "Key": "environment-type",
+      "Value": "production"
+    }
+  ],
+  "VersionLabel": "Please_use_--version-label",
+  "SolutionStackName": "64bit Amazon Linux 2018.03 v2.11.0 running Docker 18.03.1-ce",
+  "OptionSettings": [
+    {
+      "Namespace": "aws:autoscaling:launchconfiguration",
+      "OptionName": "EC2KeyName",
+      "Value": "aws"
+    },
+    {
+      "Namespace": "aws:autoscaling:launchconfiguration",
+      "OptionName": "IamInstanceProfile",
+      "Value": "arn:aws:iam::985988196667:instance-profile/aws-elasticbeanstalk-ec2-role"
+    },
+    {
+      "Namespace": "aws:autoscaling:launchconfiguration",
+      "OptionName": "InstanceType",
+      "Value": "t2.micro"
+    },
+    {
+      "Namespace": "aws:autoscaling:launchconfiguration",
+      "OptionName": "SecurityGroups",
+      "Value": "sg-4f74e22a"
+    },
+    {
+      "Namespace": "aws:autoscaling:launchconfiguration",
+      "OptionName": "RootVolumeType",
+      "Value": "standard"
+    },
+    {
+      "Namespace": "aws:autoscaling:launchconfiguration",
+      "OptionName": "RootVolumeSize",
+      "Value": "10"
+    },
+    {
+      "Namespace": "aws:ec2:vpc",
+      "OptionName": "VPCId",
+      "Value": "vpc-82c4d8e0"
+    },
+    {
+      "Namespace": "aws:ec2:vpc",
+      "OptionName": "Subnets",
+      "Value": "subnet-57b9b823"
+    },
+    {
+      "Namespace": "aws:ec2:vpc",
+      "OptionName": "AssociatePublicIpAddress",
+      "Value": "true"
+    },
+    {
+      "Namespace": "aws:elasticbeanstalk:environment",
+      "OptionName": "EnvironmentType",
+      "Value": "SingleInstance"
+    }
+  ]
+}
