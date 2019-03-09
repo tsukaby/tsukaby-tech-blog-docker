@@ -34,9 +34,8 @@ RUN unzip './*.zip' -d /usr/src/wordpress/wp-content/themes
 
 # Download lang files
 WORKDIR /usr/src/wordpress/wp-content/
-RUN wget https://s3-ap-northeast-1.amazonaws.com/tsukaby.techblog/languages.zip
-RUN unzip languages.zip && rm languages.zip
-
+RUN wget https://downloads.wordpress.org/translation/core/5.1/ja.zip && \
+  unzip ja.zip -d languages/ && rm ja.zip
 
 # Change owner
 RUN chown -R www-data:www-data /usr/src/wordpress/wp-content
