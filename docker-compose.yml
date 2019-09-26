@@ -1,0 +1,32 @@
+version: "3.5"
+
+services:
+  wordpress:
+    build: .
+    restart: always
+    ports:
+      - "80:80"
+    depends_on:
+      - db
+    environment:
+      WORDPRESS_DB_HOST: "db:3306"
+      WORDPRESS_DB_NAME: "wordpress"
+      WORDPRESS_DB_USER: "admin"
+      WORDPRESS_DB_PASSWORD: "pass"
+
+  db:
+    image: mysql:5.7
+    restart: always
+    volumes:
+      - "$PWD/.docker-compose/db-data:/var/lib/mysql"
+    environment:
+      MYSQL_RANDOM_ROOT_PASSWORD: "yes"
+      MYSQL_DATABASE: "wordpress"
+      MYSQL_USER: "admin"
+      MYSQL_PASSWORD: "pass"
+    user: "1000:50"
+    command: --innodb-use-native-aio=0
+
+networks:
+  default:
+    name: wordpress-net
