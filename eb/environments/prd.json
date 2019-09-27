@@ -15,7 +15,7 @@
     }
   ],
   "VersionLabel": "Please_use_--version-label",
-  "SolutionStackName": "64bit Amazon Linux 2018.03 v2.11.0 running Docker 18.03.1-ce",
+  "SolutionStackName": "64bit Amazon Linux 2018.03 v2.12.17 running Docker 18.06.1-ce",
   "OptionSettings": [
     {
       "Namespace": "aws:autoscaling:launchconfiguration",
@@ -30,12 +30,12 @@
     {
       "Namespace": "aws:autoscaling:launchconfiguration",
       "OptionName": "InstanceType",
-      "Value": "t2.micro"
+      "Value": "t3.micro"
     },
     {
       "Namespace": "aws:autoscaling:launchconfiguration",
       "OptionName": "SecurityGroups",
-      "Value": "sg-4f74e22a"
+      "Value": "sg-0fd7dc9122985d4a3"
     },
     {
       "Namespace": "aws:autoscaling:launchconfiguration",
@@ -55,7 +55,7 @@
     {
       "Namespace": "aws:ec2:vpc",
       "OptionName": "Subnets",
-      "Value": "subnet-57b9b823"
+      "Value": "subnet-57b9b823,subnet-5e381918,subnet-5e710d76"
     },
     {
       "Namespace": "aws:ec2:vpc",

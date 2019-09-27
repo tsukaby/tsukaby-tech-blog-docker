@@ -1,0 +1,12 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - |
+        aws elasticbeanstalk create-environment \
+          --version-label ${VERSION_LABEL} \
+          --environment-name ${ENV_NAME} \
+          --cname-prefix ${CNAME_PREFIX} \
+          --cli-input-json file://eb/environments/prd.json \
+          --region ap-northeast-1
