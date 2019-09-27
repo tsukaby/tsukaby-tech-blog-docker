@@ -34,14 +34,13 @@ aws elasticbeanstalk describe-application-versions --application-name tsukaby-te
 VERSION_LABEL=
 
 # Run command
-aws elasticbeanstalk create-environment --version-label ${VERSION_LABEL} --environment-name ${ENV_NAME} --cli-input-json file://eb/environments/prd.json
+aws elasticbeanstalk create-environment --environment-name ${ENV_NAME} --version-label ${VERSION_LABEL} --cli-input-json file://eb/environments/prd.json
 ```
 
 ### Update
 
 ```
 # Set values
-APP_NAME=
 ENV_NAME=
 VERSION_LABEL=
 
