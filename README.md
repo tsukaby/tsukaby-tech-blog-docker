@@ -25,11 +25,10 @@ If you want to reset the database, you can delete `.docker-compose/db-data/*`.
 
 ```
 # Set values
-APP_NAME=
 ENV_NAME=
 
 # List versions
-aws elasticbeanstalk describe-application-versions --application-name ${APP_NAME} --query 'ApplicationVersions[].VersionLabel'
+aws elasticbeanstalk describe-application-versions --application-name tsukaby-tech-blog --query 'ApplicationVersions[].VersionLabel'
 
 # Set
 VERSION_LABEL=
@@ -47,5 +46,5 @@ ENV_NAME=
 VERSION_LABEL=
 
 # Run command
-aws elasticbeanstalk update-environment --application-name ${APP_NAME} --environment-name ${ENV_NAME} --version-label ${VERSION_LABEL}
+aws elasticbeanstalk update-environment --application-name tsukaby-tech-blog --environment-name ${ENV_NAME} --version-label ${VERSION_LABEL}
 ```
