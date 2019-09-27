@@ -8,7 +8,6 @@ RUN pip install awscli
 # Install plugins
 WORKDIR /tmp/wp-plugins
 RUN wget https://downloads.wordpress.org/plugin/svg-support.2.3.15.zip
-RUN wget https://downloads.wordpress.org/plugin/crayon-syntax-highlighter.zip
 RUN wget https://downloads.wordpress.org/plugin/easy-fancybox.zip
 RUN wget https://downloads.wordpress.org/plugin/google-analytics-for-wordpress.7.8.2.zip
 RUN wget https://downloads.wordpress.org/plugin/google-sitemap-generator.4.1.0.zip
