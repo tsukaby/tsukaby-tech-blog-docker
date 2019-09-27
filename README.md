@@ -1,12 +1,27 @@
-### Packaging
+# tsukaby-tech-blog-docker
+
+## Development
+
+### Build
 
 ```
-./package_for_elastic_beanstalk.sh
+docker-compose build
 ```
 
-### Deploy
+### Run
 
-#### Create
+```
+docker-compose up
+```
+
+open "http://$(docker-machine)"
+
+Your database data is stored in the `.docker-compose/db-data` folder.
+If you want to reset the database, you can delete `.docker-compose/db-data/*`.
+
+## Deploy
+
+### Create
 
 ```
 # Set values
@@ -23,7 +38,7 @@ VERSION_LABEL=
 aws elasticbeanstalk create-environment --version-label ${VERSION_LABEL} --environment-name ${ENV_NAME} --cli-input-json file://eb/environments/prd.json
 ```
 
-#### Update
+### Update
 
 ```
 # Set values
