@@ -66,6 +66,31 @@
       "Namespace": "aws:elasticbeanstalk:environment",
       "OptionName": "EnvironmentType",
       "Value": "SingleInstance"
+    },
+    {
+      "Namespace": "aws:elasticbeanstalk:application:environment",
+      "OptionName": "WORDPRESS_DB_HOST",
+      "Value": ""
+    },
+    {
+      "Namespace": "aws:elasticbeanstalk:application:environment",
+      "OptionName": "WORDPRESS_DB_NAME",
+      "Value": ""
+    },
+    {
+      "Namespace": "aws:elasticbeanstalk:application:environment",
+      "OptionName": "WORDPRESS_DB_PASSWORD",
+      "Value": ""
+    },
+    {
+      "Namespace": "aws:elasticbeanstalk:application:environment",
+      "OptionName": "WORDPRESS_DB_USER",
+      "Value": ""
+    },
+    {
+      "Namespace": "aws:elasticbeanstalk:application:environment",
+      "OptionName": "WORDPRESS_DEBUG",
+      "Value": ""
     }
   ]
 }
