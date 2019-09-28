@@ -91,6 +91,11 @@
       "Namespace": "aws:elasticbeanstalk:application:environment",
       "OptionName": "WORDPRESS_DEBUG",
       "Value": ""
+    },
+    {
+      "Namespace": "aws:elasticbeanstalk:application:environment",
+      "OptionName": "WORDPRESS_CONFIG_EXTRA",
+      "Value": "if(isset($_SERVER['HTTP_X_FORWARDED_FOR'])){$list = explode(',',$_SERVER['HTTP_X_FORWARDED_FOR']);$_SERVER['REMOTE_ADDR'] = $list[0];}"
     }
   ]
 }
