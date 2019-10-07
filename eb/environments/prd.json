@@ -15,7 +15,7 @@
     }
   ],
   "VersionLabel": "Please_use_--version-label",
-  "SolutionStackName": "64bit Amazon Linux 2018.03 v2.12.17 running Docker 18.06.1-ce",
+  "SolutionStackName": "64bit Amazon Linux 2018.03 v2.15.3 running Docker 19.03.6-ce",
   "OptionSettings": [
     {
       "Namespace": "aws:autoscaling:launchconfiguration",

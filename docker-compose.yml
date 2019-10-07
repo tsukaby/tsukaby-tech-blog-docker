@@ -13,6 +13,9 @@ services:
       WORDPRESS_DB_NAME: "wordpress"
       WORDPRESS_DB_USER: "admin"
       WORDPRESS_DB_PASSWORD: "pass"
+      WAIT_HOSTS: db:3306
+      WAIT_SLEEP_INTERVAL: 5
+    entrypoint: sh -c "/usr/local/bin/wait && docker-entrypoint.sh apache2-foreground"
 
   db:
     image: mysql:5.7
