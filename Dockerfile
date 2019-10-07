@@ -19,6 +19,7 @@ RUN wget https://downloads.wordpress.org/plugin/amazon-s3-and-cloudfront.2.2.1.z
 RUN wget https://downloads.wordpress.org/plugin/jetpack.7.7.2.zip
 RUN wget https://downloads.wordpress.org/plugin/amazon-associates-link-builder.1.9.3.zip
 RUN wget https://downloads.wordpress.org/plugin/siteguard.1.4.3.zip
+RUN wget https://downloads.wordpress.org/plugin/enlighter.3.10.0.zip
 
 RUN unzip './*.zip' -d /usr/src/wordpress/wp-content/plugins
 
